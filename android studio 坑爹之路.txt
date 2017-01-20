@@ -1,0 +1,14 @@
+android studio build apk 报错：oom
+解决方法：build.gradle 里面 android{
+添加  dexOptions {
+        incremental = true
+        preDexLibraries = false
+        javaMaxHeapSize "4g" // 2g should be also OK
+    }
+
+}
+
+
+
+
+
